@@ -1,0 +1,105 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #a18cd1, #fbc2eb);
+    padding: 20px;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.homepage-button a {
+    background-color: #5f4b8b;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.homepage-button a:hover {
+    background-color: #4a3475;
+}
+
+/* Success Message Styling */
+.success-message {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#success-text {
+    color: #5f4b8b;
+    font-size: 2.5rem;
+    animation: fadeIn 1.5s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Event Details Styling */
+.details-container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text */
+}
+
+.event-details {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.event-details strong {
+    color: #5f4b8b;
+}
+
+/* Edit Button Styling */
+.edit-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.edit-button {
+    background-color: #5f4b8b;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.edit-button:hover {
+    background-color: #4a3475;
+}

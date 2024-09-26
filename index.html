@@ -7,15 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Logo and Website Name at the Top Left -->
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Website Logo">
+        </div>
+        <div class="site-name">
+            <h1>Your Website Name</h1>
+        </div>
+    </div>
+
     <div class="login-container">
         <h2>Admin Login</h2>
-        <form class="login-form">
+        
+        <!-- Modify the form action to point to the next page -->
+        <form class="login-form" action="register.html" method="get">
             <input type="text" placeholder="Admin ID" class="input-field" required>
             <input type="password" placeholder="Password" class="input-field" required>
             <button type="submit" class="login-button">Login</button>
         </form>
+
         <button class="home-button">Go to Homepage</button>
-        <!--comment-->
     </div>
 </body>
 </html>

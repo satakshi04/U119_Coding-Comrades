@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="display detail.css">
+</head>
+<body>
+    <!-- Top bar with Logo and Homepage button -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Website Logo" width="150">
+        </div>
+        <div class="homepage-button">
+            <a href="homepage.html">Homepage</a>
+        </div>
+    </header>
+
+    <!-- Success Message -->
+    <div class="success-message">
+        <h1 id="success-text">EVENT SUCCESSFULLY PUBLISHED</h1>
+    </div>
+
+    <!-- Event Details -->
+    <div class="details-container">
+        <h2>Event Details</h2>
+        <div class="event-details">
+            <p><strong>Type of Event:</strong> <span id="display-event-type"></span></p>
+            <p><strong>Event Description:</strong> <span id="display-event-description"></span></p>
+            <p><strong>Event Venue:</strong> <span id="display-event-venue"></span></p>
+            <p><strong>Event Date:</strong> <span id="display-event-date"></span></p>
+            <p><strong>Registration Fees:</strong> <span id="display-event-fees"></span></p>
+            <p><strong>Contact Info:</strong> <span id="display-event-contact"></span></p>
+        </div>
+        
+        <!-- Edit Button -->
+        <div class="edit-button-container">
+            <a href="register.html" class="edit-button">Edit</a>
+        </div>
+    </div>
+
+    <!-- JavaScript to extract form data from URL -->
+    <script>
+        // Function to get query parameters from the URL
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                    return decodeURIComponent(pair[1].replace(/\+/g, ' '));
+                }
+            }
+            return false;
+        }
+
+        // Populate event details from form data passed via URL
+        document.getElementById('display-event-type').innerText = getQueryVariable('eventType');
+        document.getElementById('display-event-description').innerText = getQueryVariable('eventDescription');
+        document.getElementById('display-event-venue').innerText = getQueryVariable('eventVenue');
+        document.getElementById('display-event-date').innerText = getQueryVariable('eventDate');
+        document.getElementById('display-event-fees').innerText = getQueryVariable('eventFees');
+        document.getElementById('display-event-contact').innerText = getQueryVariable('contactName') + ', ' +
+                                                                    getQueryVariable('contactPhone') + ', ' +
+                                                                    getQueryVariable('contactEmail');
+    </script>
+</body>
+</html>

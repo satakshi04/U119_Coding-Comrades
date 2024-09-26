@@ -1,16 +1,36 @@
-/* General body styling */
-body {
-    margin: 0;
-    padding: 0;
+/* Logo and Site Name Styling */
+.header {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(to bottom, #a18cd1, #fbc2eb);
+    padding: 10px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+.site-name h1 {
+    font-size: 24px;
+    color: #5f4b8b;
+    margin-left: 10px;
     font-family: Arial, sans-serif;
 }
 
-/* Container for the login form */
+/* Centering the login form in the page */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #a18cd1, #fbc2eb);
+}
+
+/* Keep the login container in the center while keeping header at top */
 .login-container {
     text-align: center;
     background-color: #fff;
@@ -18,6 +38,8 @@ body {
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     width: 300px;
+    position: relative; /* Makes the container stack below the header */
+    z-index: 1; /* Ensures it sits above any other elements */
 }
 
 /* Form heading */
@@ -74,4 +96,15 @@ h2 {
 
 .home-button:hover {
     background-color: #eab9d8;
+}
+/* Fade-out effect */
+.fade-out {
+    animation: fadeOut 10.0s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
