@@ -1,0 +1,77 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #a18cd1, #fbc2eb);
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the login form */
+.login-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+/* Form heading */
+h2 {
+    margin-bottom: 30px;
+    color: #5f4b8b;
+    font-size: 24px;
+}
+
+/* Styling for input fields */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #5f4b8b;
+    border-radius: 15px;
+    outline: none;
+    font-size: 16px;
+    color: #5f4b8b;
+}
+
+/* Styling for the login button */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #5f4b8b;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #7a68c1;
+}
+
+/* Styling for the "Go to Homepage" button */
+.home-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #fbc2eb;
+    color: #5f4b8b;
+    font-size: 16px;
+    border: 2px solid #5f4b8b;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #eab9d8;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register an Event</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Website Logo">
+        </div>
+        <div class="home-button-container">
+            <button class="home-button">Homepage</button>
+        </div>
+    </div>
+    
+    <hr class="divider">
+
+    <h2 class="page-title">Register an Event</h2>
+
+    <div class="form-container">
+        <form>
+            <div class="form-row">
+                <div class="left-box">
+                    <label for="event-type">Type of Event</label>
+                    <select id="event-type" class="input-field">
+                        <option value="educational">Educational</option>
+                        <option value="health">Health</option>
+                        <option value="financial">Financial</option>
+                        <option value="entertainment">Entertainment</option>
+                    </select>
+                </div>
+
+                <div class="right-box">
+                    <label for="event-image">Image of the Event (Banner/Flyer, etc.)</label>
+                    <input type="file" id="event-image" class="input-field">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="event-description">Description of the Event</label>
+                <textarea id="event-description" class="input-field" rows="4" placeholder="Enter event description here"></textarea>
+            </div>
+
+            <div class="form-row">
+                <div class="left-box">
+                    <label for="venue">Venue</label>
+                    <select id="venue" class="input-field">
+                        <option value="chennai">Chennai</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="bangalore">Bangalore</option>
+                    </select>
+                </div>
+
+                <div class="right-box">
+                    <label for="event-date">Event Date</label>
+                    <input type="date" id="event-date" class="input-field">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="left-box">
+                    <label for="registration-fees">Registration Fees</label>
+                    <input type="number" id="registration-fees" class="input-field" placeholder="Enter fees">
+                </div>
+
+                <div class="right-box">
+                    <label for="contact-info">Contact Info</label>
+                    <input type="text" id="contact-info" class="input-field" placeholder="Click to add contact info" onclick="showContactForm()">
+                </div>
+            </div>
+
+            <div id="contact-form" class="contact-form hidden">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" class="input-field" placeholder="Contact Name">
+                
+                <label for="contact-phone">Phone</label>
+                <input type="tel" id="contact-phone" class="input-field" placeholder="Phone Number">
+                
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" class="input-field" placeholder="Email Address">
+            </div>
+
+            <div class="form-row">
+                <button type="submit" class="publish-button">Publish</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
