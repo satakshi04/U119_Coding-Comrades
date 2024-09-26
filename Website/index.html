@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS for styling -->
+</head>
+<body>
+    <header>
+        <h1>Upcoming Events</h1>
+        <form action="search_events.html" method="GET" class="search-bar">
+            <input type="text" name="search" placeholder="Search events..." required>
+            <select name="sort" id="sortOptions">
+                <option value="name">Name</option>
+                <option value="date">Date</option>
+                <option value="location">Location</option>
+                <option value="venue">Venue</option>
+                <option value="calendar">Calendar</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+    </header>
+    
+    <main>
+        <section id="events">
+            <h2>Current Events</h2>
+            <div class="event">
+                <h3>Music Concert</h3>
+                <p>Date: October 5, 2024</p>
+                <p>Location: New York</p>
+                <p>Venue: Central Park</p>
+                <p>Description: Join us for a night of amazing music and fun!</p>
+                <button onclick="alert('You have registered for Music Concert!')">Register</button>
+            </div>
+            
+            <div class="event">
+                <h3>Art Exhibition</h3>
+                <p>Date: October 12, 2024</p>
+                <p>Location: Los Angeles</p>
+                <p>Venue: Art Gallery</p>
+                <p>Description: Explore the latest art pieces from renowned artists.</p>
+                <button onclick="alert('You have registered for Art Exhibition!')">Register</button>
+            </div>
+
+            <div class="event">
+                <h3>Tech Conference</h3>
+                <p>Date: November 15, 2024</p>
+                <p>Location: San Francisco</p>
+                <p>Venue: Convention Center</p>
+                <p>Description: A gathering of tech enthusiasts and innovators.</p>
+                <button onclick="alert('You have registered for Tech Conference!')">Register</button>
+            </div>
+        </section>
+
+        <section id="search-results" style="display: none;">
+            <h2>Search Results</h2>
+            <div class="event">
+                <h3>Cooking Workshop</h3>
+                <p>Date: November 20, 2024</p>
+                <p>Location: Chicago</p>
+                <p>Venue: Culinary Institute</p>
+                <p>Description: Learn the art of cooking from professional chefs.</p>
+                <button onclick="alert('You have registered for Cooking Workshop!')">Register</button>
+            </div>
+
+            <div class="event">
+                <h3>Photography Seminar</h3>
+                <p>Date: December 5, 2024</p>
+                <p>Location: Miami</p>
+                <p>Venue: Beachfront Hotel</p>
+                <p>Description: Enhance your photography skills with expert guidance.</p>
+                <button onclick="alert('You have registered for Photography Seminar!')">Register</button>
+            </div>
+
+            <div class="event">
+                <h3>Fitness Challenge</h3>
+                <p>Date: January 10, 2025</p>
+                <p>Location: Seattle</p>
+                <p>Venue: Sports Center</p>
+                <p>Description: Join us for a month-long fitness challenge.</p>
+                <button onclick="alert('You have registered for Fitness Challenge!')">Register</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Events Page</p>
+    </footer>
+</body>
+</html>
+
+
