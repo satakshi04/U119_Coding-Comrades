@@ -4,7 +4,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #a18cd1;
+    background: linear-gradient(to bottom, #a18cd1, #fbc2eb);
     margin: 0;
     padding: 0;
 }
@@ -13,10 +13,10 @@ body {
     width: 90%;
     max-width: 600px;
     margin: 50px auto;
-    background-color: #8a30c6;
+    background-color: #f6f2f4;
     padding: 25px 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 h2, h3 {
