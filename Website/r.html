@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register and Payment form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Register & Payment Form</h2>
+        <form id="userForm">
+            <h3>Personal Information</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+
+            <label for="email">Email (Gmail):</label>
+            <input type="email" id="email" name="email" pattern="[^ @]+@gmail\.com" placeholder="example@gmail.com" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <h3>Payment Information</h3>
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" placeholder="1234 5678 9012 3456" required>
+
+            <label for="expiry">Expiry Date:</label>
+            <input type="month" id="expiry" name="expiry" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" name="cvv" pattern="\d{3}" placeholder="123" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="successMessage" class="success">
+            Thank you! Your information has been submitted successfully.
+        </div>
+    </div>
+
+    <script src="j.js"></script>
+</body>
+</html>
