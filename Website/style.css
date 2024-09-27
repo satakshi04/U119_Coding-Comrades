@@ -1,78 +1,85 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f0f8ff; /* Light background color */
+    background-color: #f496e1;
 }
 
 header {
     text-align: center;
     margin-bottom: 20px;
-    background-color: #4a90e2; /* Header background color */
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
 }
 
-h1 {
-    font-size: 2.5em; /* Increased font size for the title */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.search-bar {
-    margin: 20px 0;
-}
-
-input[type="text"] {
+.search-container input[type="text"],
+.search-container select,
+.search-container input[type="date"] {
     padding: 10px;
-    width: 200px;
-    border: 2px solid #4a90e2; /* Border color */
+    margin-right: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-#sortOptions {
-    padding: 10px;
-    border: 2px solid #4a90e2; /* Border color */
-    border-radius: 5px;
-}
-
-button {
+.search-container button {
     padding: 10px 15px;
-    margin-left: 10px;
-    cursor: pointer;
-    background-color: #4a90e2; /* Button background color */
+    background-color: #0a0a0b;
     color: white;
     border: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    cursor: pointer;
 }
 
-button:hover {
-    background-color: #357ab7; /* Darker button color on hover */
+.search-container button:hover {
+    background-color: #3012d7;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.events {
+    margin-top: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .event {
-    background: white;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-    width: 300px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
-.event h3 {
-    font-size: 1.8em; /* Increased font size for event titles */
+.event:last-child {
+    border-bottom: none;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em; /* Decreased font size for footer */
+.event .cn{
+    width: 160px;
+    height: 40px;
+    background-color: #db12db;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
 }
 
+.event .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+
+.cn:hover{
+    background-color: #fff;
+}
+
+
+  
+  
 

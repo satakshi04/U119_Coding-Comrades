@@ -3,90 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events Page</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS for styling -->
+    <title>Popular Events</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
 </head>
 <body>
-    <header>
-        <h1>Upcoming Events</h1>
-        <form action="search_events.html" method="GET" class="search-bar">
-            <input type="text" name="search" placeholder="Search events..." required>
-            <select name="sort" id="sortOptions">
-                <option value="name">Name</option>
-                <option value="date">Date</option>
-                <option value="location">Location</option>
-                <option value="venue">Venue</option>
-                <option value="calendar">Calendar</option>
-            </select>
-            <button type="submit">Search</button>
-        </form>
-    </header>
-    
-    <main>
-        <section id="events">
-            <h2>Current Events</h2>
-            <div class="event">
-                <h3>Music Concert</h3>
-                <p>Date: October 5, 2024</p>
-                <p>Location: New York</p>
-                <p>Venue: Central Park</p>
-                <p>Description: Join us for a night of amazing music and fun!</p>
-                <button onclick="alert('You have registered for Music Concert!')">Register</button>
-            </div>
+
+<header>
+    <h1>Popular Events</h1>
+</header>
+
+<div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search for events...">
+    <select id="sortDropdown" onchange="toggleLocationDropdowns()">
+        <option value="name">Sort by Name</option>
+        <option value="venue">Sort by Venue</option>
+        <option value="city">Sort by City</option>
+        <option value="state">Sort by State</option>
+        <option value="category">Sort by Category</option>
+    </select>
+
+    <!-- Location dropdowns -->
+    <div id="locationDropdowns" style="display: none;">
+        <select id="stateDropdown" onchange="populateCityDropdown()">
+            <option value="">Select State</option>
+            <option value="M">Maharashtra</option>
+            <option value="TN">Tamil nadu</option>
+            <option value="K">Kerela</option>
+        </select>
+
+        <select id="cityDropdown">
+            <option value="">Select City</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Madhurai">Madhurai</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Thane">Thane</option>
+            <option value="Ernakulam">Ernakulam</option>
+            <option value="Thiruvananthapuram">Thiruvananthapuram</option>
             
-            <div class="event">
-                <h3>Art Exhibition</h3>
-                <p>Date: October 12, 2024</p>
-                <p>Location: Los Angeles</p>
-                <p>Venue: Art Gallery</p>
-                <p>Description: Explore the latest art pieces from renowned artists.</p>
-                <button onclick="alert('You have registered for Art Exhibition!')">Register</button>
-            </div>
+          
+        </select>
+    </div>
+     <!-- Category dropdown -->
+     <select id="categoryDropdown" onchange="searchEvents()">
+        <option value="">Select Category</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Health">Health</option>
+        <option value="Educational">Educational</option>
+        <option value="Finance">Finance</option>
+    </select>
 
-            <div class="event">
-                <h3>Tech Conference</h3>
-                <p>Date: November 15, 2024</p>
-                <p>Location: San Francisco</p>
-                <p>Venue: Convention Center</p>
-                <p>Description: A gathering of tech enthusiasts and innovators.</p>
-                <button onclick="alert('You have registered for Tech Conference!')">Register</button>
-            </div>
-        </section>
+    <input type="date" id="eventDate">
+    <button onclick="searchEvents()">Search</button>
+</div>
 
-        <section id="search-results" style="display: none;">
-            <h2>Search Results</h2>
-            <div class="event">
-                <h3>Cooking Workshop</h3>
-                <p>Date: November 20, 2024</p>
-                <p>Location: Chicago</p>
-                <p>Venue: Culinary Institute</p>
-                <p>Description: Learn the art of cooking from professional chefs.</p>
-                <button onclick="alert('You have registered for Cooking Workshop!')">Register</button>
-            </div>
+<div class="events" id="eventList">
+    <div class="event">
+        <h2>Alan walker Cocert</h2>
+        <p>Venue: YMCA ground,Nandanam</p>
+        <p>Date: 2025-02-01</p>
+        <button class="cn"><a href="page.html">Show more</a></button>
 
-            <div class="event">
-                <h3>Photography Seminar</h3>
-                <p>Date: December 5, 2024</p>
-                <p>Location: Miami</p>
-                <p>Venue: Beachfront Hotel</p>
-                <p>Description: Enhance your photography skills with expert guidance.</p>
-                <button onclick="alert('You have registered for Photography Seminar!')">Register</button>
-            </div>
+    </div>
+    <div class="event">
+        <h2>Hackathon</h2>
+        <p>Venue: SRM,Kattakalantur</p>
+        <p>Date: 2024-10-05</p>
+        <button class="cn"><a href="#">Show more</a></button>
+    </div>
+    <div class="event">
+        <h2>Health camp</h2>
+        <p>Venue:SRM,Vadapalani</p>
+        <p>Date: 2024-10-10</p>
+        <button class="cn"><a href="#">Show more</a></button>
+    </div>
+    <!-- Additional events can be added here -->
+    <button id="redirectBtn">Show more</button>
+</div>
 
-            <div class="event">
-                <h3>Fitness Challenge</h3>
-                <p>Date: January 10, 2025</p>
-                <p>Location: Seattle</p>
-                <p>Venue: Sports Center</p>
-                <p>Description: Join us for a month-long fitness challenge.</p>
-                <button onclick="alert('You have registered for Fitness Challenge!')">Register</button>
-            </div>
-        </section>
-    </main>
+<script src="script.js"></script> <!-- Link to the JavaScript file -->
 
-    <footer>
-        <p>&copy; 2024 Events Page</p>
-    </footer>
 </body>
 </html>
 
